@@ -57,5 +57,27 @@ function fetchProducts() {
             })
         )
         // hata olursa devreye gir
-        .catch();
+        .catch((err) => console.log(err));
+}
+// sepeti açma kapama
+
+sepetBtn.addEventListener('click', toggleSepet);
+closeBtn.addEventListener('click', toggleSepet);
+
+function toggleSepet() {
+    modal.classList.toggle('active');
+}
+
+// SEPETE ELEMAN EKLEME
+
+const basket = [];
+
+function sepeteEkle(param) {
+    const foundItem = basket.find((eleman) => eleman.id == param.id);
+
+    if (foundItem) {
+        foundItem.amount += 1;
+    } else {
+        basket.push(param);
+    }
 }
