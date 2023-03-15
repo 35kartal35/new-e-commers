@@ -6,49 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <link rel="stylesheet" href="style.css" />
-    <script defer src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>E-Ticaret</h1>
-        <input type="text" placeholder="ürün ismi giriniz" />
-        <div>
-            <button>Sepet</button>
-            <button>KayıtOl</button>
+        <input type="text" placeholder="ürünleri giriniz" />
+        <div class="buttons">
+            <button id="sepet">Sepet</button>
+            <button>Kaydol</button>
             <button>Giriş Yap</button>
         </div>
     </header>
+
     <main>
         <!-- KATEGORİLER -->
         <div class="category-wrapper">
             <h1>Kategoriler</h1>
-            <div class="categories"></div>
+            <div class="category-list"></div>
         </div>
         <!-- ÜRÜNLER -->
-        <div class="products-wrapper">
-            <h1>ÜRÜNLER</h1>
+        <div class="product-wrapper">
+            <h1>Ürünler</h1>
+            <div class="product-list"></div>
+        </div>
+        <!-- ÜRÜNLER SON -->
 
-            <div class="products"></div>
-            <!-- ÜRÜNLER SON -->
-            <!-- MODAL > SEPET -->
+        <!-- modal -->
+        <div class="modal-wrapper">
+            <div class="modal">
+                <h1>SEPET</h2>
+                    <img id="close" src="/images/images.png" />
 
-            <div class="modal-wrapper">
-                <div class="modal">
-                    <img id="close" src="/images/close.png" />
+                    <div id="modal-list"></div>
 
-                    <div class="sepetItem">
-                        <h2>Telefon</h2>
-                        <h2>5000</h2>
-                        <p>Miktar: 4</p>
-                    </div>
-                    <p>Toplam <span>5000</span></p>
-                </div>
+                    <p class="toplam">Toplam: <span id="fiyat">0</span> $</p>
             </div>
-            <!-- modal bitiş -->
-
+        </div>
+        <!-- modal bitiş -->
     </main>
 </body>
 
